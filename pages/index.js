@@ -4,17 +4,6 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Image from "next/image.js";
 import { useState } from "react";
-// import coel from "../static/coel.jpg";
-// import design from "../public/design.png";
-// import code from "../public/code.png";
-// import collection from "../public/lego-collection.png";
-// import forum from "../public/lego-forum.png";
-// import marketplace from "../public/lego-marketplace.png";
-// import fullMarket from "../public/lego-full-market.png";
-// import notifications from "../public/lego-notifications.png";
-// import event from "../public/Tower-event.png";
-// import home from "../public/Tower-home.png";
-// import tickets from "../public/Tower-tickets.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,6 +15,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className="px-10 md:px-20 bg-slate-800 lg:px-40 dark:bg-gray-800">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
@@ -34,7 +24,7 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className=" cursor-pointer text-2xl"
+                  className="cursor-pointer text-2xl"
                 />
               </li>
               <li>
