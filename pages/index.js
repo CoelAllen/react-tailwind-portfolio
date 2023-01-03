@@ -16,20 +16,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="px-10 md:px-20 bg-slate-800 lg:px-40 dark:bg-gray-800">
+      <main className="px-10 md:px-20 lg:px-40 dark:bg-gray-800 bg-gray-200">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl">Made with Next.js</h1>
+            <h1 className="text-lg dark:text-gray-200">
+              Made with Next.js and Tailwind
+            </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl"
+                  className="cursor-pointer text-2xl dark:text-white"
                 />
               </li>
               <li>
                 <a
-                  className=" bg-gradient-to-br from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-md ml-8"
+                  className=" bg-gradient-to-br from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-md ml-8 dark:text-gray-800"
                   href="#"
                 >
                   Resume
@@ -57,7 +59,7 @@ export default function Home() {
               {/* NOTE This is where my description/ intro tag goes */}
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-teal-800">
             <AiFillLinkedin />
             <AiFillGithub />
           </div>
@@ -65,9 +67,11 @@ export default function Home() {
         {/* NOTE Second Page */}
         <section>
           <div>
-            <h3 className="text-3xl py-1">Services I offer</h3>
+            <h3 className="text-3xl py-1 dark:text-gray-200">
+              Services I offer
+            </h3>
             {/*NOTE This is more text to update.  The span is for anything I'd like to highlight such as links to projects or maybe codeworks */}
-            <p className="text-md py-2 leading-8 text-gray-800">
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Assumenda voluptates consequatur quaerat
               <span className="text-teal-500">agencies</span> doloribus et
@@ -82,7 +86,7 @@ export default function Home() {
             </p>
           </div>
           <div className="md:columns-2 lg:columns-2 my-10">
-            <div className="text-center shadow-lg p-10 rounded-xl">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700">
               <div className="flex justify-center">
                 <Image
                   src="/design.png"
@@ -91,31 +95,33 @@ export default function Home() {
                   height={100}
                 />
               </div>
-              <h3 className="text-lg font-medium pt-8 pb-2">
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">
                 Beautiful Designs
               </h3>
               {/* NOTE more text describing design */}
-              <p className="py-2">
+              <p className="py-2 dark:text-gray-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                 aperiam voluptate enim distinctio repellat voluptas modi
                 reiciendis minima facilis natus aut, nulla, cumque expedita vel
                 inventore voluptatem amet ipsa illo.
               </p>
               <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Lucid</p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">Photoshop</p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">
+                Illustrator
+              </p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">Figma</p>
+              <p className="text-gray-800 dark:text-gray-200 py-1">Lucid</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700">
               <div className="flex justify-center">
                 <Image src="/code.png" alt="design" width={100} height={100} />
               </div>
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-gray-300">
+                Languages and Frameworks
               </h3>
               {/* NOTE more text describing design */}
-              <p className="py-2">
+              <p className="py-2 dark:text-gray-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                 aperiam voluptate enim distinctio repellat voluptas modi
                 reiciendis minima facilis natus aut, nulla, cumque expedita vel
