@@ -26,7 +26,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="px-10 md:px-20 lg:px-40 dark:bg-gray-800">
+      <main className="px-10 md:px-20 bg-slate-800 lg:px-40 dark:bg-gray-800">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl">Made with Next.js</h1>
