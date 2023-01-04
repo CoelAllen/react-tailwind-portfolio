@@ -247,10 +247,12 @@ export default function Home() {
               Lego Trader is designed around the trading and collection of Lego
               sets. From the collection page, sets are selected as "Owned" or
               "Wishlist." Owned sets can be made tradeable and compared against
-              others' wishlists. Using Node.js web-sockets, all trades and chat
-              happen in real time. An extensive notifications system keeps users
-              informed on the status of any trade and alerts when wishlist items
-              become available.
+              others' wishlists. Then trades can be offered or accepted.
+              <br />
+              Using Node.js web-sockets, all trades and chat happen in real
+              time. An extensive notifications system keeps users informed on
+              the status of any trade and alerts when wishlist items become
+              available.
             </p>
             <div className="flex flex-col gap-10 lg:flex-row lg:flex-wrap py-10">
               <div className="basis-1/3 flex-1">
