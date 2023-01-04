@@ -22,7 +22,7 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="md:text-lg dark:text-gray-200 invisible md:visible">
-              Next.js/Tailwind
+              Built with Next.js/Tailwind
             </h1>
             <ul className="flex items-center">
               <li>
@@ -44,7 +44,7 @@ export default function Home() {
           </nav>
           {showModal ? (
             <>
-              <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+              <div className="justify-center items-center flex overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
                 <div className="relative w-auto my-6 mx-auto max-w-3xl">
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
