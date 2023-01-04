@@ -6,7 +6,8 @@ import Image from "next/image.js";
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -16,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="px-10 md:px-20 lg:px-40 dark:bg-gray-800 bg-gray-200">
+      <main className="px-10 md:px-20 lg:px-40 dark:bg-gray-800 bg-gray-100">
         {/* NOTE Bio section */}
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
@@ -34,12 +35,45 @@ export default function Home() {
                 <a
                   className=" bg-gradient-to-br from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-md ml-8 dark:text-gray-800"
                   href="#"
+                  onClick={() => setShowModal(true)}
                 >
                   Resume
                 </a>
               </li>
             </ul>
           </nav>
+          {showModal ? (
+            <>
+              <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+                <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                  {/*content*/}
+                  <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                    {/*body*/}
+                    <div className="relative p-3 flex-auto">
+                      <iframe
+                        src="/resume.pdf"
+                        height={680}
+                        width={500}
+                        // @ts-ignore
+                        frameborder="0"
+                      ></iframe>
+                    </div>
+                    {/*footer*/}
+                    <div className="flex items-center justify-end  border-t border-solid border-slate-200 rounded-b">
+                      <button
+                        className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onClick={() => setShowModal(false)}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            </>
+          ) : null}
           <div className="text-center px-10 pt-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Coel Allen
@@ -73,10 +107,9 @@ export default function Home() {
         {/* NOTE Services section */}
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-gray-200">
+            <h3 className="text-3xl py-1 text-teal-600 font-medium">
               Services I offer
             </h3>
-            {/*NOTE This is more text to update.  The span is for anything I'd like to highlight such as links to projects or maybe codeworks */}
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
               As a full-stack developer I am ready to help with any aspect of
               your project. My formal training was conducted at{" "}
@@ -95,7 +128,7 @@ export default function Home() {
           </div>
           <div className="md:columns-2 lg:columns-2 my-10">
             {/* NOTE Design card */}
-            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 h-">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 bg-gray-200">
               <div className="flex justify-center">
                 <Image
                   src="/design.png"
@@ -124,7 +157,7 @@ export default function Home() {
               <p className="text-gray-800 dark:text-gray-200 py-1">Lucid</p>
             </div>
             {/* NOTE Coding card */}
-            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 mt-10">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 bg-gray-200 mt-10">
               <div className="flex justify-center">
                 <Image src="/code.png" alt="design" width={100} height={100} />
               </div>
@@ -210,14 +243,14 @@ export default function Home() {
             <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
               Lego Trader
             </h4>
-            <p className="text-md py-2 leading-8 text-gray-800">
-              Lego Trader is an online marketplace designed around trading and
-              collection Lego sets. From the collection page sets are selected
-              as "Owned" or "Wishlist." Owned sets can be made tradeable and
-              compared against others' wishlists. Using Node.js web-sockets, all
-              trades and chat happen in real time. An extensive notifications
-              system keeps users informed on the status of any trade and alerts
-              when wishlist items become available.
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+              Lego Trader is designed around the trading and collection of Lego
+              sets. From the collection page, sets are selected as "Owned" or
+              "Wishlist." Owned sets can be made tradeable and compared against
+              others' wishlists. Using Node.js web-sockets, all trades and chat
+              happen in real time. An extensive notifications system keeps users
+              informed on the status of any trade and alerts when wishlist items
+              become available.
             </p>
             <div className="flex flex-col gap-10 lg:flex-row lg:flex-wrap py-10">
               <div className="basis-1/3 flex-1">
