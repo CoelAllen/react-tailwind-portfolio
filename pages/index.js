@@ -17,10 +17,11 @@ export default function Home() {
       </Head>
 
       <main className="px-10 md:px-20 lg:px-40 dark:bg-gray-800 bg-gray-200">
+        {/* NOTE Bio section */}
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="md:text-lg dark:text-gray-200 invisible md:visible">
-              Made on Next.js with Tailwind Css
+              Next.js/Tailwind
             </h1>
             <ul className="flex items-center">
               <li>
@@ -56,7 +57,6 @@ export default function Home() {
               />
             </div>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
-              {/* NOTE This is where my description/ intro tag goes */}
               Currently freelance, looking for contract or full-time employment
               opportunities.
             </p>
@@ -70,7 +70,7 @@ export default function Home() {
             </a>
           </div>
         </section>
-        {/* NOTE Second Page */}
+        {/* NOTE Services section */}
         <section>
           <div>
             <h3 className="text-3xl py-1 dark:text-gray-200">
@@ -94,7 +94,8 @@ export default function Home() {
             </p>
           </div>
           <div className="md:columns-2 lg:columns-2 my-10">
-            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700">
+            {/* NOTE Design card */}
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 h-">
               <div className="flex justify-center">
                 <Image
                   src="/design.png"
@@ -122,6 +123,7 @@ export default function Home() {
               <p className="text-gray-800 dark:text-gray-200 py-1">Figma</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">Lucid</p>
             </div>
+            {/* NOTE Coding card */}
             <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 mt-10">
               <div className="flex justify-center">
                 <Image src="/code.png" alt="design" width={100} height={100} />
@@ -134,7 +136,8 @@ export default function Home() {
                 Coding is a commitment to continual education. Languages and
                 frameworks update constantly and I strive to continually learn.
                 Starting with Vue.js and moving to React.js, I am excited to
-                learn more and confident in gaining and maintaining proficiency.
+                learn more and confident in gaining and maintaining proficiency
+                in whatever you may need.
               </p>
               <h4 className="py-4 text-teal-600">Skills include</h4>
               <div className=" columns-3">
@@ -164,61 +167,57 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* NOTE Portfolio section */}
         <section>
+          <h3 className="text-3xl py-2 text-teal-600 font-medium">Portfolio</h3>
+          {/* NOTE Tower */}
           <div>
-            <h3 className="text-3xl py-2 text-teal-600 font-medium">
-              Portfolio
-            </h3>
-            <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
-              Tower
-            </h4>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Tower is an ticket marketplace where users can buy tickets, create
-              their own events and see who is attending. Events have set ticket
-              amounts and can be canceled, canceling any issued tickets. Events
-              can be sorted by type and canceled or sold out events convey their
-              status visually.
-            </p>
-          </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover shadow-lg"
-                src="/Tower-home.png"
-                alt="Tower Home"
-                height={1000}
-                width={1000}
-              />
+            <div>
+              <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
+                Tower
+              </h4>
+              <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                Tower is an ticket marketplace where users can buy tickets,
+                create their own events and see who is attending. Events have
+                set ticket amounts and can be canceled, canceling any issued
+                tickets. Events can be sorted by type and canceled or sold out
+                events convey their status visually.
+              </p>
             </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                className="rounded-lg object-cover shadow-lg"
-                src="/Tower-event.png"
-                alt="Tower Event"
-                height={1000}
-                width={1000}
-              />
+            <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
+              <div className="basis-1/3 flex-1">
+                <Image
+                  className="rounded-lg object-cover shadow-lg"
+                  src="/Tower-home.png"
+                  alt="Tower Home"
+                  height={1000}
+                  width={1000}
+                />
+              </div>
+              <div className="basis-1/3 flex-1">
+                <Image
+                  className="rounded-lg object-cover shadow-lg"
+                  src="/Tower-event.png"
+                  alt="Tower Event"
+                  height={1000}
+                  width={1000}
+                />
+              </div>
             </div>
-            {/* <div className="basis-1/4 flex-1">
-              <Image
-                className="rounded-lg object-cover"
-                src="/Tower-tickets.png"
-                alt="Tower Tickets"
-                height={1000}
-                width={1000}
-              />
-            </div> */}
           </div>
+          {/* NOTE Lego Trader */}
           <div>
             <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
               Lego Trader
             </h4>
             <p className="text-md py-2 leading-8 text-gray-800">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Assumenda voluptates consequatur quaerat
-              <span className="text-teal-500">agencies</span> doloribus et
-              corporis dolore, totam eius eaque magnam asperiores consequuntur
-              modi voluptatum id exercitationem mollitia est! Alias, culpa.
+              Lego Trader is an online marketplace designed around trading and
+              collection Lego sets. From the collection page sets are selected
+              as "Owned" or "Wishlist." Owned sets can be made tradeable and
+              compared against others' wishlists. Using Node.js web-sockets, all
+              trades and chat happen in real time. An extensive notifications
+              system keeps users informed on the status of any trade and alerts
+              when wishlist items become available.
             </p>
             <div className="flex flex-col gap-10 lg:flex-row lg:flex-wrap py-10">
               <div className="basis-1/3 flex-1">
