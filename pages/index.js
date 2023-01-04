@@ -19,8 +19,8 @@ export default function Home() {
       <main className="px-10 md:px-20 lg:px-40 dark:bg-gray-800 bg-gray-200">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-lg dark:text-gray-200">
-              Made with Next.js and Tailwind
+            <h1 className="md:text-lg dark:text-gray-200 invisible md:visible">
+              Made on Next.js with Tailwind Css
             </h1>
             <ul className="flex items-center">
               <li>
@@ -39,7 +39,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="text-center p-10">
+          <div className="text-center px-10 pt-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
               Coel Allen
             </h2>
@@ -48,7 +48,7 @@ export default function Home() {
             </h3>
             <div>
               <Image
-                className="mx-auto rounded-full mt-10 md:h-96 md:w-192"
+                className="mx-auto rounded-full mt-10"
                 src="/coel.jpg"
                 alt="Stuff"
                 width={200}
@@ -57,11 +57,17 @@ export default function Home() {
             </div>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
               {/* NOTE This is where my description/ intro tag goes */}
+              Currently freelance, looking for contract or full-time employment
+              opportunities.
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-teal-800">
-            <AiFillLinkedin />
-            <AiFillGithub />
+          <div className="text-5xl flex justify-center gap-16 py-3 mb-5 text-gray-600 dark:text-teal-800">
+            <a href="https://www.linkedin.com/in/coelallen/">
+              <AiFillLinkedin className="cursor-pointer" />
+            </a>
+            <a href="https://github.com/CoelAllen">
+              <AiFillGithub className="cursor-pointer" />
+            </a>
           </div>
         </section>
         {/* NOTE Second Page */}
@@ -72,17 +78,19 @@ export default function Home() {
             </h3>
             {/*NOTE This is more text to update.  The span is for anything I'd like to highlight such as links to projects or maybe codeworks */}
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Assumenda voluptates consequatur quaerat
-              <span className="text-teal-500">agencies</span> doloribus et
-              corporis dolore, totam eius eaque magnam asperiores consequuntur
-              modi voluptatum id exercitationem mollitia est! Alias, culpa.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni id
-              architecto aliquid! Debitis nobis culpa totam consequatur,
-              repellendus minima aliquam magni assumenda libero explicabo
-              dolorem eos praesentium labore doloremque nulla!
+              As a full-stack developer I am ready to help with any aspect of
+              your project. My formal training was conducted at{" "}
+              <a
+                href="https://boisecodeworks.com/"
+                className="text-teal-500 dark:text-teal-200"
+              >
+                CodeWorks Academy
+              </a>{" "}
+              where we used several languages to build single and multi-page
+              apps including database work and all api calls. We also learned
+              the skills required to understand and utilize new languages and
+              frameworks fast. I look forward to putting these skills to use for
+              you.
             </p>
           </div>
           <div className="md:columns-2 lg:columns-2 my-10">
@@ -100,10 +108,11 @@ export default function Home() {
               </h3>
               {/* NOTE more text describing design */}
               <p className="py-2 dark:text-gray-200">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                aperiam voluptate enim distinctio repellat voluptas modi
-                reiciendis minima facilis natus aut, nulla, cumque expedita vel
-                inventore voluptatem amet ipsa illo.
+                At the heart of any good build is design. In my diverse
+                background I have used many different tools to create beautiful,
+                functional designs. From creating logos and merchandise to full
+                Figma mock-ups, form has remained an important part of my
+                journey.
               </p>
               <h4 className="py-4 text-teal-600">Design tools I use</h4>
               <p className="text-gray-800 dark:text-gray-200 py-1">Photoshop</p>
@@ -113,7 +122,7 @@ export default function Home() {
               <p className="text-gray-800 dark:text-gray-200 py-1">Figma</p>
               <p className="text-gray-800 dark:text-gray-200 py-1">Lucid</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700">
+            <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 mt-10">
               <div className="flex justify-center">
                 <Image src="/code.png" alt="design" width={100} height={100} />
               </div>
@@ -122,34 +131,59 @@ export default function Home() {
               </h3>
               {/* NOTE more text describing design */}
               <p className="py-2 dark:text-gray-200">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                aperiam voluptate enim distinctio repellat voluptas modi
-                reiciendis minima facilis natus aut, nulla, cumque expedita vel
-                inventore voluptatem amet ipsa illo.
+                Coding is a commitment to continual education. Languages and
+                frameworks update constantly and I strive to continually learn.
+                Starting with Vue.js and moving to React.js, I am excited to
+                learn more and confident in gaining and maintaining proficiency.
               </p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Lucid</p>
+              <h4 className="py-4 text-teal-600">Skills include</h4>
+              <div className=" columns-3">
+                <p className="text-gray-800 dark:text-gray-200 py-1">
+                  Javascript
+                </p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">CSS</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">Vue.js</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">
+                  Bootstrap
+                </p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">
+                  Tailwind
+                </p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">
+                  React.js
+                </p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">C#</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">MySQL</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">Node.js</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">.NET</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">MongoDB</p>
+                <p className="text-gray-800 py-1 dark:text-gray-200">
+                  Mongoose
+                </p>
+              </div>
             </div>
           </div>
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1">Portfolio</h3>
-            <p className="text-md py-2 leading-8 text-gray-800">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Assumenda voluptates consequatur quaerat
-              <span className="text-teal-500">agencies</span> doloribus et
-              corporis dolore, totam eius eaque magnam asperiores consequuntur
-              modi voluptatum id exercitationem mollitia est! Alias, culpa.
+            <h3 className="text-3xl py-2 text-teal-600 font-medium">
+              Portfolio
+            </h3>
+            <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
+              Tower
+            </h4>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+              Tower is an ticket marketplace where users can buy tickets, create
+              their own events and see who is attending. Events have set ticket
+              amounts and can be canceled, canceling any issued tickets. Events
+              can be sorted by type and canceled or sold out events convey their
+              status visually.
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1">
               <Image
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover shadow-lg"
                 src="/Tower-home.png"
                 alt="Tower Home"
                 height={1000}
@@ -158,7 +192,7 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1">
               <Image
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover shadow-lg"
                 src="/Tower-event.png"
                 alt="Tower Event"
                 height={1000}
@@ -176,6 +210,9 @@ export default function Home() {
             </div> */}
           </div>
           <div>
+            <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
+              Lego Trader
+            </h4>
             <p className="text-md py-2 leading-8 text-gray-800">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Assumenda voluptates consequatur quaerat
@@ -183,10 +220,10 @@ export default function Home() {
               corporis dolore, totam eius eaque magnam asperiores consequuntur
               modi voluptatum id exercitationem mollitia est! Alias, culpa.
             </p>
-            <div className="flex flex-col gap-10 lg:flex-row lg:flex-wrap">
+            <div className="flex flex-col gap-10 lg:flex-row lg:flex-wrap py-10">
               <div className="basis-1/3 flex-1">
                 <Image
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover shadow-lg"
                   src="/lego-full-market.png"
                   alt="Marketplace Page"
                   height={1000}
@@ -195,7 +232,7 @@ export default function Home() {
               </div>
               <div className="basis-1/3 flex-1">
                 <Image
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover shadow-lg"
                   src="/lego-marketplace.png"
                   alt="Trade Modal"
                   height={1000}
@@ -204,7 +241,7 @@ export default function Home() {
               </div>
               <div className="basis-1/3 flex-1">
                 <Image
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover shadow-lg"
                   src="/lego-notifications.png"
                   alt="Notifications Example"
                   height={1000}
@@ -213,7 +250,7 @@ export default function Home() {
               </div>
               <div className="basis-1/3 flex-1">
                 <Image
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover shadow-lg"
                   src="/lego-forum2.png"
                   alt="Forum Page"
                   height={1000}
