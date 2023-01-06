@@ -96,10 +96,18 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 mb-5 text-gray-600 dark:text-teal-800">
-            <a href="https://www.linkedin.com/in/coelallen/">
+            <a
+              href="https://www.linkedin.com/in/coelallen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillLinkedin className="cursor-pointer" />
             </a>
-            <a href="https://github.com/CoelAllen">
+            <a
+              href="https://github.com/CoelAllen"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillGithub className="cursor-pointer" />
             </a>
           </div>
@@ -115,6 +123,8 @@ export default function Home() {
               your project. My formal training was conducted at{" "}
               <a
                 href="https://boisecodeworks.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-teal-500 dark:text-teal-200"
               >
                 CodeWorks Academy
@@ -244,10 +254,19 @@ export default function Home() {
               Lego Trader
             </h4>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Lego Trader is designed around the trading and collection of Lego
-              sets. From the collection page, sets are selected as an owned or
-              wishlist item. Owned sets can be made tradeable and compared
-              against others wishlists. Then trades can be offered or accepted.
+              {" "}
+              <a
+                href="https://lego-traders.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-500 dark:text-teal-200"
+              >
+                Lego Trader
+              </a>{" "}
+              is designed around the trading and collection of Lego sets. From
+              the collection page, sets are selected as an owned or wishlist
+              item. Owned sets can be made tradeable and compared against others
+              wishlists. Then trades can be offered or accepted.
               <br />
               Using Node.js web-sockets, all trades and chat happen in real
               time. An extensive notifications system keeps users informed on
