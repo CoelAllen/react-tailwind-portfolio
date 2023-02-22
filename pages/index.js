@@ -51,7 +51,7 @@ export default function Home() {
                     {/*body*/}
                     <div className="relative p-3 flex-auto">
                       <iframe
-                        src="/resume.pdf"
+                        src="/CAResume.pdf"
                         height={680}
                         width={500}
                         // @ts-ignore
