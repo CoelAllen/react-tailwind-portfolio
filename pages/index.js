@@ -312,6 +312,87 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* NOTE Weather app */}
+          <div>
+            <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
+              React Weather App
+            </h4>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+              This is a mobile-optimized weather app that takes in data from
+              WeatherAPI.com and give you detailed daily weather and a five-day
+              forecast. It was built using React.js. Units can be easily changed
+              between Imperial and Metric. Each card can be tapped to show more
+              specific information about that days weather including: humidity,
+              precipitation, windspeed and direction and much more.
+            </p>
+            <div className="flex flex-col  gap-10 lg:flex-row lg:flex-wrap py-10">
+              <div className="basis-1/4 flex-1">
+                <Image
+                  className="rounded-lg object-cover shadow-lg m-auto"
+                  src="/Weather-one.png"
+                  alt="Weather app"
+                  height={500}
+                  width={500}
+                />
+              </div>
+              <div className="basis-1/4 flex-1">
+                <Image
+                  className="rounded-lg object-cover shadow-lg m-auto"
+                  src="/Weather-two.png"
+                  alt="more weather"
+                  height={500}
+                  width={500}
+                />
+              </div>
+            </div>
+          </div>
+          {/* NOTE Tenzies */}
+          <div>
+            <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
+              Tenzies
+            </h4>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+              Here is a fun little game I made to practice using the Vite build
+              tool. Built in React, each die is randomized and selecting it
+              holds the value.
+            </p>
+            <div className="flex flex-col  gap-10 lg:flex-row lg:flex-wrap py-10">
+              <div className="basis-1/4 flex-1">
+                <Image
+                  className="rounded-lg object-cover shadow-lg m-auto"
+                  src="/Tenzies.png"
+                  alt="Tenzies!"
+                  height={500}
+                  width={500}
+                />
+              </div>
+            </div>
+          </div>
+          {/* NOTE CoelSpice */}
+          <div>
+            <h4 className="text-xl py-1 dark:text-gray-200 font-medium">
+              Delicious
+            </h4>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+              This is one of my first react builds. It pulls from a recipe Api
+              to display searchable cuisine. Each card is live rendered. Each
+              recipe has its own page listing both ingredients and prep
+              instructions. Search is live and preselected filters are also
+              available. I used imported animations and styling to complete the
+              app.
+            </p>
+            <div className="flex flex-col  gap-10 lg:flex-row lg:flex-wrap py-10">
+              <div className="basis-1/4 flex-1">
+                <Image
+                  className="rounded-lg object-cover shadow-lg m-auto"
+                  src="/coelspice.png"
+                  alt="Delicious!"
+                  height={1000}
+                  width={1000}
+                />
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
